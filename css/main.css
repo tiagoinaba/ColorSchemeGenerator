@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html, body {
+  background-color: #141735;
+}
+
+body {
+  padding: 5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  position: relative;
+  background-color: #FFFDFE;
+  box-shadow: 0 0.4rem 1.1rem rgb(0, 0, 0);
+}
+.container form {
+  background-color: #FFFDFE;
+  position: absolute;
+  inset: 0 0 auto 0;
+  box-shadow: 0 0.4rem 1.1rem rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+}
+.container form .color-picker {
+  background-color: #E5E5E5;
+  border: 0.5px solid #D1D5DB;
+  padding: 0.4px 0.6px;
+  width: 6.1rem;
+  height: 4.2rem;
+}
+.container form .select-div {
+  display: grid;
+  grid-template-areas: "select";
+  width: 312px;
+}
+.container form .select-div::after {
+  content: "";
+  background: url(../img/arrow.svg) no-repeat right;
+  grid-area: select;
+  pointer-events: none;
+  background-position-x: 28rem;
+}
+.container form .select-div .select-type {
+  appearance: none;
+  border: 1px solid #D1D5DB;
+  padding: 0.9rem 1.3rem;
+  border-radius: 6px;
+  grid-area: select;
+  font-family: inherit;
+  font-weight: 400;
+}
+.container form .btn {
+  font-family: inherit;
+  border: 1px solid #D1D5DB;
+  border-radius: 4px;
+  padding: 1.3rem 1.1rem;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+::-webkit-color-swatch {
+  border: 0.5px solid #313131;
+}
+
+.colors {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.color {
+  width: 100%;
+  height: 55rem;
+}
+
+.hex-codes-div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 1rem 0;
+}
+.hex-codes-div .hex-code {
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.popup {
+  background-color: #FFFDFE;
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  border-radius: 7px;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */
